@@ -9,8 +9,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'rails_admin'
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
+  gem "pry-rails"
+  gem "pry"
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
