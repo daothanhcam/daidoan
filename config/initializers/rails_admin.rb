@@ -1,12 +1,68 @@
 RailsAdmin.config do |config|
-
   config.model Post do
      edit do
        field :title
        field :content, :ck_editor
        field :post_type
      end
+
+     list do
+       field :id
+       field :title
+       field :content do
+         pretty_value do
+           value = "..."
+         end
+       end
+       field :post_type
+       field :view
+       field :created_at
+       field :updated_at
+     end
+
+     show do
+       field :id
+       field :title
+       field :content do
+        formatted_value do
+           value.html_safe
+         end
+       end
+       field :post_type
+       field :view
+       field :created_at
+       field :updated_at
+     end
   end
+
+  config.model User do
+    list do
+      field :id
+      field :email
+      field :name
+      field :role
+      field :sign_in_count
+      field :last_sign_in_at
+      field :last_sign_in_ip
+      field :created_at
+      field :updated_at
+    end
+
+    show do
+      field :id
+      field :email
+      field :name
+      field :role
+      field :sign_in_count
+      field :current_sign_in_at
+      field :current_sign_in_ip
+      field :last_sign_in_at
+      field :last_sign_in_ip
+      field :created_at
+      field :updated_at
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==

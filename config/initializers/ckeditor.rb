@@ -36,4 +36,8 @@ Ckeditor.setup do |config|
   # By default: nil (no limit)
   # config.assets_languages = ['en', 'uk']
   # config.assets_plugins = ['image', 'smiley']
+  # config.autoGrow_onStartup = true;
+  # config.width = 500;
+  # config.height = 500;
+  # config.autoGrow_minHeight = 300;
 end
