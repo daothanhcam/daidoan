@@ -13,6 +13,7 @@ gem 'rails_admin'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem "pry-rails"
