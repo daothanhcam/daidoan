@@ -4,10 +4,17 @@ RailsAdmin.config do |config|
        field :title
        field :content, :ck_editor
        field :post_type
+       field :user_id, :hidden do
+         default_value do
+           bindings[:view]._current_user.id
+         end
+       end
      end
 
      list do
        field :id
+       field :user_id
+       field :state
        field :title
        field :content do
          pretty_value do
@@ -61,6 +68,14 @@ RailsAdmin.config do |config|
       field :created_at
       field :updated_at
     end
+
+    edit do
+      field :email
+      field :password
+      field :password_confirmation
+      field :name
+      field :role
+    end
   end
 
   ### Popular gems integration
@@ -72,7 +87,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   ## == Cancan ==
-  config.authorize_with :cancan
+  config.authorize_with :cancan, AdminAbility
 
   ## == Pundit ==
   # config.authorize_with :pundit

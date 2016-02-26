@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225095717) do
+ActiveRecord::Schema.define(version: 20160226020843) do
 
   create_table "banners", force: :cascade do |t|
     t.integer  "post_id",    limit: 4
@@ -112,9 +112,10 @@ ActiveRecord::Schema.define(version: 20160225095717) do
     t.string   "post_type",  limit: 255
     t.text     "content",    limit: 65535
     t.integer  "view",       limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "user_id",    limit: 4,     null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.integer  "user_id",    limit: 4,                         null: false
+    t.string   "state",      limit: 255,   default: "preview"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
@@ -134,6 +135,7 @@ ActiveRecord::Schema.define(version: 20160225095717) do
     t.datetime "updated_at",                                            null: false
     t.string   "role",                   limit: 255, default: "member"
     t.string   "name",                   limit: 255,                    null: false
+    t.string   "state",                  limit: 255, default: "active"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

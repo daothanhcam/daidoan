@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top shadow-z-1", id="main-header">
+  <div class="container">
+    <nav>
+      <div id="logo-container" class="col-md-3">
+         <%= link_to "The Beginning", posts_path, id: "logo" %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   posts_path %></li>
+        <li><%= link_to "Help",   static_pages_help_path %></li>
+        <li><%= link_to "Log in", new_user_session_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

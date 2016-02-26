@@ -1,0 +1,62 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* layouts */
+.border-buttom-div {
+  border-bottom: solid 1px rgba(0,0,0,0.15);
+  height: 20px;
+}
+
+/* body */
+body {
+  background-color: #FFF !important;
+}
+
+/* right content */
+#right-content {
+  border: solid 1px #FFF
+}
+
+/* header */
+#main-header {
+  background-color: #F5F5F5;
+  color: black;
+}
+
+#logo {
+  color: black;
+}
+
+#logo-container {
+  margin-top: 20px;
+}
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}

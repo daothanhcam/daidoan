@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require ckeditor/init
+//= require bootstrap
+
+$(function(){
+  $.material.init();
+  $(".navbar-fixed-top").autoHidingNavbar();
+});
+

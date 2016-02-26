@@ -14,6 +14,7 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancancan', '~> 1.10'
+gem 'bootstrap-sass', '3.2.0.0'
 
 group :development, :test do
   gem "pry-rails"
