@@ -10,14 +10,14 @@
   </head>
   <body>
     <%= render "layouts/header" %>
-    <div class="container">
-      <div>
-        <div class="col-md-8">
-          <%= yield %>
-        </div >
-        <div class="col-md-3" id="right-content">
-        </div>
+    <div class="container" style="margin-top: 60px">
+      <div class="col-md-8">
+        <%= yield %>
+      </div >
+      <div class="col-md-3 col-md-offset-1" id="right-content">
       </div>
+    </div>
+    <div class="container">
       <%= render 'layouts/footer' %>
     </div>
   </body>

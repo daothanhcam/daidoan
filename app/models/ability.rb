@@ -24,6 +24,8 @@ class Ability
         post.user_id == user.id || post.state == "preview"
       end
     when "member"
+      can :access, :rails_admin   # grant access to rails_admi
+      can :dashboard              # grant access to the dashboard
     end
   end
 end

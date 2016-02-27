@@ -134,7 +134,6 @@ ActiveRecord::Schema.define(version: 20160226020843) do
     t.datetime "created_at",                                            null: false
     t.datetime "updated_at",                                            null: false
     t.string   "role",                   limit: 255, default: "member"
-    t.string   "name",                   limit: 255,                    null: false
     t.string   "state",                  limit: 255, default: "active"
   end
 
