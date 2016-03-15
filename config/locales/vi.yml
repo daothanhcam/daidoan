@@ -1,0 +1,13 @@
+vi:
+  errors:
+    converations:
+      user_and_friend_were_same: "User and friend were same"
+      converation_existing: "Converation already created"
+    messages:
+      content_too_long: "The content is too long."
+  posts:
+    show:
+      created_by: "Người viết: "
+  header:
+    login: "Đăng nhập"
+    logout: "Thoát"

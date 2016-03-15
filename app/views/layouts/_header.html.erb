@@ -2,12 +2,15 @@
   <div class="container">
     <nav>
       <div id="logo-container" class="col-md-3">
-         <%= link_to "The Beginning", posts_path, id: "logo" %>
+         <%= link_to "LuuDanh", posts_path, id: "logo" %>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   posts_path %></li>
-        <li><%= link_to "Help",   static_pages_help_path %></li>
-        <li><%= link_to "Log in", new_user_session_path %></li>
+        <% if current_user %>
+          <li><%= link_to t(".logout"), destroy_user_session_path,
+            method: :delete %></li>
+        <% else %>
+          <li><%= link_to t(".login"), new_user_session_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

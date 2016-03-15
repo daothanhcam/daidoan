@@ -3,4 +3,8 @@ class PostsController < ApplicationController
     @posts = Post.paginate(page: params[:page],
                            per_page: Settings.posts.per_page)
   end
+
+  def show
+    @post = Post.find params[:id]
+  end
 end

@@ -4,7 +4,7 @@ class CreateBanners < ActiveRecord::Migration
       t.references :post, index: true, foreign_key: true
       t.date :start_date
       t.date :end_date
-      t.boolean :actived
+      t.boolean :actived, null: false, default: false
 
       t.timestamps null: false
     end

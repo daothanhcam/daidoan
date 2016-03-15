@@ -1,5 +1,6 @@
-<h1><%= link_to post.title, "#" %></h1>
+<h1><%= link_to post.title, post_path(post) %></h1>
 <div class="row no-side-margin">
-  <%= truncate post.content.html_safe, length: 1000, escape: false, separator: "\n", omission: "" %>
-  <%= link_to "[Read more...]", "#" %>
+  <%= truncate post.content.html_safe, length: 1000, escape: false,
+    separator: "\n", omission: "" %>
+  <%= link_to "[Read more...]", post_path(post) %>
 </div>

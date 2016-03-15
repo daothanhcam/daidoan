@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$system-color: #109688;
 
 /* global */
 .no-side-margin {
@@ -27,6 +28,10 @@ body {
   height: 900px;
 }
 
+/* main content */
+#main-content {
+  padding: 0px 25px;
+}
 /* header */
 #main-header {
   background-color: #F5F5F5;
@@ -34,11 +39,10 @@ body {
 }
 
 #logo {
-  color: black;
+  font-size: 35px;
 }
 
 #logo-container {
-  margin-top: 20px;
 }
 
 /* footer */
@@ -47,6 +51,20 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+}
+
+/* paginate */
+.pagination > .active > a, .pagination > .active > a:hover,
+.pagination > .active > a:focus, .pagination > .active > span,
+.pagination > .active > span:hover, .pagination > .active > span:focus {
+  color: #fff;
+  background-color: $system-color;
+  border-color: $system-color;
+}
+
+.pagination > li > a:hover, .pagination > li > a,
+.pagination > li > span:hover, .pagination > li > span:focus {
+  color: $system-color;
 }
 
 footer a {
@@ -71,3 +89,7 @@ footer ul li {
   margin-left: 15px;
 }
 
+.author-info {
+  float: right;
+  margin-top: 25px;
+}

@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<div class="row no-side-margin">
+  <%= @post.content.html_safe %>
+</div>
+<div class="author-info">
+  <i><%= t ".created_by" %><%= @post.user.name %></i>
+</div>
+

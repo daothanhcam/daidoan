@@ -1,6 +1,12 @@
 class Post < ActiveRecord::Base
-  validates :title, presence: true
-  belongs_to :user, :inverse_of => :players
+  belongs_to :user
+  has_many :comments
+
+  validates :title, presence: true, length: {maximum: Settings.posts.
+                                             title_max_leng}
+  validates :content, presence: true, length: {maximum: Settings.posts
+                                               .content_max_leng}
+  validates :post_type, presence: true
 
   def post_type_enum
     PostType.pluck(:name, :id).to_h

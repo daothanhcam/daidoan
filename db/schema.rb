@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226020843) do
+ActiveRecord::Schema.define(version: 20160315145455) do
 
   create_table "banners", force: :cascade do |t|
     t.integer  "post_id",    limit: 4
@@ -43,9 +43,10 @@ ActiveRecord::Schema.define(version: 20160226020843) do
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "post_id",    limit: 4
-    t.boolean  "hidden"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.string   "content",    limit: 255,                     null: false
+    t.string   "state",      limit: 255, default: "visible", null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160226020843) do
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "friend_id",  limit: 4, null: false
   end
 
   add_index "converations", ["user_id"], name: "index_converations_on_user_id", using: :btree
@@ -135,6 +137,7 @@ ActiveRecord::Schema.define(version: 20160226020843) do
     t.datetime "updated_at",                                            null: false
     t.string   "role",                   limit: 255, default: "member"
     t.string   "state",                  limit: 255, default: "active"
+    t.string   "name",                   limit: 255,                    null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
