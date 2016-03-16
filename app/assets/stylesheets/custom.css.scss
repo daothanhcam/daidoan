@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$system-color: #109688;
+$system-color: #4CAF50;
 
 /* global */
 .no-side-margin {
@@ -11,12 +11,17 @@ $system-color: #109688;
   padding-left: 0px;
   padding-right: 0px;
 }
+.float-right {
+  float: right;
+}
 /* layouts */
 .border-buttom-div {
   border-bottom: solid 1px rgba(0,0,0,0.15);
   height: 20px;
 }
-
+.border-row {
+   border-bottom: 1px solid $system-color;
+}
 /* body */
 body {
   background-color: #FFF !important;
@@ -40,6 +45,7 @@ body {
 
 #logo {
   font-size: 35px;
+  color: $system-color !important;
 }
 
 #logo-container {

@@ -1,8 +1,19 @@
 <h1><%= @post.title %></h1>
-<div class="row no-side-margin">
+
+<div class="row">
   <%= @post.content.html_safe %>
 </div>
-<div class="author-info">
-  <i><%= t ".created_by" %><%= @post.user.name %></i>
-</div>
 
+<div class="row">
+  <i class="author-info"><%= t ".created_by" %><%= @post.user.name %></i>
+</div>
+<%= render "layouts/empty_row" %>
+
+<div class="function-button row">
+  <button class="btn btn-sm btn-success">Thich</button>
+  <button class="btn btn-sm btn-success">Luu Bai Viet</button>
+  <button class="btn btn-sm float-right btn-success">Binh Luan</button>
+</div>
+<%= render "layouts/empty_row_with_border" %>
+
+<%= render @comments %>
