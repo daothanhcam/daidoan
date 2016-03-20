@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find params[:id]
-    @comments = @post.comments
+    @comments = @post.comments.visible
+    @comment = @post.comments.build(user: current_user)
   end
 end

@@ -2,11 +2,9 @@
 <html>
   <head>
     <title><%= yield(:title) %>The Beginning</title>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <script src="dist/jquery.bootstrap-autohidingnavbar.min.js"></script>
-    <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
   </head>
   <body>
     <%= render "layouts/header" %>

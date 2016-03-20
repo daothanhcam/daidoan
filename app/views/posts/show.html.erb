@@ -1,19 +1,24 @@
 <h1><%= @post.title %></h1>
 
-<div class="row">
+<div class="row no-side-margin">
   <%= @post.content.html_safe %>
 </div>
 
-<div class="row">
+<div class="row no-side-margin">
   <i class="author-info"><%= t ".created_by" %><%= @post.user.name %></i>
 </div>
-<%= render "layouts/empty_row" %>
 
-<div class="function-button row">
-  <button class="btn btn-sm btn-success">Thich</button>
-  <button class="btn btn-sm btn-success">Luu Bai Viet</button>
-  <button class="btn btn-sm float-right btn-success">Binh Luan</button>
+<div class="function-button row no-side-margin">
+  <button class="btn btn-sm btn-default float-left"><%= t ".like" %></button>
+  <button class="btn btn-sm btn-default"><%= t ".save" %></button>
+  <%= image_tag "Jim Rohn.jpg", class: "img-circle" %>
+  <%= image_tag "avatar-default.gif", class: "img-circle" %>
+  <%= image_tag "rsz_dao_thanh_cam_avatar.jpg", class: "img-circle" %>
+  <%= image_tag "Jim Rohn.jpg", class: "img-circle" %>
+  <button class="btn btn-sm btn-default float-right"><%= t ".comment" %></button>
 </div>
 <%= render "layouts/empty_row_with_border" %>
 
 <%= render @comments %>
+
+<%= render "comment_form" %>

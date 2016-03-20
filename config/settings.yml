@@ -1,10 +1,14 @@
 posts:
-  per_page: 5
+  per_page: 3
 messages:
   max_length: 1000
 users:
   email_max_leng: 255
   name_max_leng: 63
+  avatar_size:
+    header: 50
+    comments: 100
+    liked: 25
 comments:
   content_max_leng: 1000
 feedbacks:
@@ -13,4 +17,3 @@ feedbacks:
 posts:
   content_max_leng: 10000
   title_max_leng: 255
-

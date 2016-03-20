@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
     .content_max_leng}
   validates :post_type, presence: true
 
+  accepts_nested_attributes_for :comments, allow_destroy: true
+
   def post_type_enum
     PostType.pluck(:name, :id).to_h
   end

@@ -20,4 +20,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    converations:
+      user_and_friend_were_same: "User and friend were same"
+      converation_existing: "Converation already created"
+    messages:
+      content_too_long: "The content is too long."
+  posts:
+    show:
+      created_by: "Người viết: "
+      comment: "Bình luận"
+      like: "Thích"
+      save: "Lưu"
+  header:
+    login: "Đăng nhập"
+    logout: "Thoát"
+  comments:
+    comment:
+      joined_date: "Tham gia: "
+      liked: "Được thích: "
+      like: "Thích"
+      save: "Lưu"
+      reply: "Trả lời"
+      updated_at: "Cập nhật: "
+      mark-spam: "Báo xấu"
+  time:
+    formats:
+      full_time_format: "%Y/%m/%d %H:%M:%S"
+      datetime_format: "%m/%d/%Y %H:%M"
+      simple_date_format: "%B %d %Y"
+      full_date_format: "%m/%d/%Y"
+      human_time_format: "%B %d at %I:%M %p"
+  date:
+    formats:
+      simple_date_format: "%B %d %Y"
+      full_date_format: "%m/%d/%Y"
+      short_date_format: "%d/%m/%y"
+      origin_date_format: "%Y/%m/%d"

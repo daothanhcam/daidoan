@@ -1,0 +1,33 @@
+<div class="row comment-row no-side-margin">
+  <div class="col-md-2 have-borders no-side-padding user-info">
+    <div class="row avatar-box center no-side-margin">
+      <%= image_tag "avatar-default.gif", size: Settings.users.avatar_size.comments.to_s %>
+    </div>
+    <div class="border-row no-side-margin" style="height: 10px;"></div>
+
+    <div class="user-text-info" >
+      <div class="row no-side-margin">
+        <b><%= current_user.name %></b>
+      </div>
+      <div class="row no-side-margin">
+        <%= current_user.role %>
+      </div>
+      <div class="row no-side-margin">
+        <span class="glyphicon glyphicon-pencil"></span> 14
+        <span style="padding: 0px 10px;">|</span>
+        <span class="glyphicon glyphicon-ok-circle"></span> 18
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10" style="padding-right: 0px;">
+    <%= fields_for @comment do |f| %>
+      <div>
+        <%= f.cktext_area :content, rows: 10, ckeditor: {toolbar: "mini"} %>
+      </div>
+      <div>
+        <%= f.submit %>
+      </div>
+      <% end %>
+  </div>
+</div>

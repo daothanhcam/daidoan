@@ -1,0 +1,50 @@
+<div class="row comment-row no-side-margin">
+  <div class="col-md-2 have-borders no-side-padding user-info">
+    <div class="row avatar-box center no-side-margin">
+      <%= image_tag "avatar-default.gif", size: Settings.users.avatar_size.comments.to_s %>
+    </div>
+    <div class="border-row no-side-margin" style="height: 10px;"></div>
+
+    <div class="user-text-info" >
+      <div class="row no-side-margin">
+        <b><%= comment.user.name %></b>
+      </div>
+      <div class="row no-side-margin">
+        <%= comment.user.role %>
+      </div>
+      <div class="row no-side-margin">
+        <span class="glyphicon glyphicon-pencil"></span> 14
+        <span style="padding: 0px 10px;">|</span>
+        <span class="glyphicon glyphicon-ok-circle"></span> 18
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10" style="padding-right: 0px;">
+    <div class="comment-box">
+      <%= comment.content %>
+    </div>
+  </div>
+
+    <div class="like-and-created-time-row col-md-10 no-side-padding">
+      <%#TODO%>
+      <% if comment.updated_at != comment.created_at %>
+        <i class="created-at float-right"><%= t ".updated_at" %><%= comment.updated_at %></i>
+      <% else %>
+        <i class="created-at float-right"><%= full_time_as_format comment.created_at %></i>
+      <% end %>
+    </div>
+
+    <div class="comment-button-row col-md-10 no-side-padding">
+      <div class="float-right">
+        <%= image_tag "avatar-default.gif", class: "img-circle" %>
+        <%= image_tag "rsz_dao_thanh_cam_avatar.jpg", class: "img-circle" %>
+        <%= image_tag "Jim Rohn.jpg", class: "img-circle" %>
+        <span>+4</span>
+        <button class="btn btn-xs btn-default" ><%= t ".like" %></button>
+        <button class="btn btn-xs btn-default"><%= t ".save" %></button>
+      </div>
+
+      <button class="btn btn-xs btn-default float-left" style="margin-left: 15px;"><%= t ".reply" %></button>
+    </div>
+</div>
