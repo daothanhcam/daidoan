@@ -32,6 +32,8 @@ en:
       comment: "Bình luận"
       like: "Thích"
       save: "Lưu"
+    comment_form:
+      comment: "Bình luận"
   header:
     login: "Đăng nhập"
     logout: "Thoát"

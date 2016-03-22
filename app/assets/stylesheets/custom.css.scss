@@ -3,6 +3,7 @@
 $system-color: #4CAF50;
 $system-color04: rgba(76, 175, 80, 0.40);
 $system-color05: rgba(76, 175, 80, 0.50);
+$system-color08: rgba(76,175,80,0.80);
 
 /* global */
 .no-side-margin {
@@ -168,9 +169,39 @@ footer ul li {
 .avatar-box {
    padding-top: 10px;
 }
-.cke_top, .cke_bottom {
+.cke_bottom {
+  visibility: hidden;
   background: rgba(207, 209, 207, 0.17) !important;
   background-image: none !important;
+  border-top: 1px solid $system-color04 !important;
+}
+.cke_top {
+  background: rgba(207, 209, 207, 0.17) !important;
+  background-image: none !important;
+  border-bottom: 1px solid $system-color04 !important;
+}
+.cke_chrome {
+  border: 1px solid $system-color04 !important;
+  box-shadow: none !important;
+}
+.cke_toolgroup {
+  border: 1px solid $system-color05 !important;
+  background:rgba(210, 210, 210, 0.18) !important;
+}
+a.cke_button_on {
+  box-shadow: 0 1px 5px $system-color inset,0 1px 0 rgba(0, 0, 0, 0) !important;
+  background: $system-color08 !important;
+  background-image: none !important;
+}
+a.cke_button_off:hover, a.cke_button_disabled:hover {
+  background: none !important;
+  background-image: none !important;
+}
+.add-comment-button {
+  color: $system-color !important;
+  border: solid 1px $system-color05 !important;
+  margin-top: 20px;
+  float: right;
 }
 /* comments */
 

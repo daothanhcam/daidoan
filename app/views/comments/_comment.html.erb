@@ -22,12 +22,11 @@
 
   <div class="col-md-10" style="padding-right: 0px;">
     <div class="comment-box">
-      <%= comment.content %>
+      <%= comment.content.html_safe %>
     </div>
   </div>
 
     <div class="like-and-created-time-row col-md-10 no-side-padding">
-      <%#TODO%>
       <% if comment.updated_at != comment.created_at %>
         <i class="created-at float-right"><%= t ".updated_at" %><%= comment.updated_at %></i>
       <% else %>

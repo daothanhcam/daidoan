@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   get 'static_pages/help'
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    resources :comments, only: [:create, :update]
+  end
 end

@@ -21,4 +21,3 @@ $(function(){
   $.material.init();
   $(".navbar-fixed-top").autoHidingNavbar();
 });
-

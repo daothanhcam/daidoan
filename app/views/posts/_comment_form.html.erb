@@ -21,12 +21,12 @@
   </div>
 
   <div class="col-md-10" style="padding-right: 0px;">
-    <%= fields_for @comment do |f| %>
+    <%= form_for [@post, @new_comment], remote: true do |f| %>
       <div>
-        <%= f.cktext_area :content, rows: 10, ckeditor: {toolbar: "mini"} %>
+        <%= f.cktext_area :content, rows: 10, ckeditor: {toolbar: "mini"}, id: "comment_content" %>
       </div>
       <div>
-        <%= f.submit %>
+        <%= f.submit t(".comment"), class: "btn btn-sm btn-default add-comment-button" %>
       </div>
       <% end %>
   </div>

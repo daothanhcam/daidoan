@@ -7,7 +7,9 @@
 <div class="row no-side-margin">
   <i class="author-info"><%= t ".created_by" %><%= @post.user.name %></i>
 </div>
-
+<div hidden="true" id="post-id-div">
+  <%= @post.id %>
+</div>
 <div class="function-button row no-side-margin">
   <button class="btn btn-sm btn-default float-left"><%= t ".like" %></button>
   <button class="btn btn-sm btn-default"><%= t ".save" %></button>
@@ -19,6 +21,8 @@
 </div>
 <%= render "layouts/empty_row_with_border" %>
 
-<%= render @comments %>
+<div class="comment-list">
+  <%= render @comments %>
+</div>
 
 <%= render "comment_form" %>
