@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get 'static_pages/help'
 
   resources :posts, only: [:index, :show] do
-    resources :comments, only: [:create, :update]
+    resources :comments, only: [:create, :destroy]
   end
 end

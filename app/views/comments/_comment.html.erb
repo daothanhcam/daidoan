@@ -35,6 +35,11 @@
     </div>
 
     <div class="comment-button-row col-md-10 no-side-padding">
+      <button class="btn btn-xs btn-default float-left" style="margin-left: 15px;"><%= t ".reply" %></button>
+      <% if current_user && current_user == comment.user %>
+        <%= link_to t(".delete"), post_comment_path(comment.post, comment), method: :delete, remote: true,
+          class: "btn btn-xs btn-defautl float-left"%>
+      <% end %>
       <div class="float-right">
         <%= image_tag "avatar-default.gif", class: "img-circle" %>
         <%= image_tag "rsz_dao_thanh_cam_avatar.jpg", class: "img-circle" %>
@@ -44,6 +49,5 @@
         <button class="btn btn-xs btn-default"><%= t ".save" %></button>
       </div>
 
-      <button class="btn btn-xs btn-default float-left" style="margin-left: 15px;"><%= t ".reply" %></button>
     </div>
 </div>

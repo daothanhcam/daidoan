@@ -7,10 +7,27 @@ class CommentsController < ApplicationController
         format.js {}
         format.json {render json: @comment, status: :created}
       else
+        #TODO flash error don't work
         flash[:success] = 'Comment posted.'
         format.html { render action: "new"  }
         format.json { render json: @comment.errors, status: :unprocessable_entity  }
       end
+    end
+  end
+
+  def destroy
+    @comment = current_user.comments.find params[:id]
+    @post = @comment.post
+    if @comment.destroy
+      respond_to do |format|
+        format.html do
+          flash[:success] = 'Comment deleted.'
+          redirect_to @post
+        end
+        format.js # JavaScript response
+      end
+    else
+      #TODO
     end
   end
 end

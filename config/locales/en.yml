@@ -40,6 +40,7 @@ en:
   comments:
     comment:
       joined_date: "Tham gia: "
+      delete: "Xóa"
       liked: "Được thích: "
       like: "Thích"
       save: "Lưu"
