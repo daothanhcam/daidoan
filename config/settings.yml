@@ -15,5 +15,5 @@ feedbacks:
   content_max_leng: 1000
   title_max_leng: 255
 posts:
-  content_max_leng: 10000
+  content_max_leng: 50000
   title_max_leng: 255

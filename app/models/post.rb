@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: {maximum: Settings.posts
     .content_max_leng}
   validates :post_type, presence: true
+  validates :user, presence: true
 
   accepts_nested_attributes_for :comments, allow_destroy: true
 

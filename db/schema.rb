@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20160316144416) do
     t.integer  "post_id",    limit: 4
     t.date     "start_date"
     t.date     "end_date"
-    t.boolean  "actived"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.boolean  "actived",              default: false, null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   add_index "banners", ["post_id"], name: "index_banners_on_post_id", using: :btree
@@ -146,8 +146,8 @@ ActiveRecord::Schema.define(version: 20160316144416) do
     t.datetime "created_at",                                            null: false
     t.datetime "updated_at",                                            null: false
     t.string   "role",                   limit: 255, default: "member"
-    t.string   "state",                  limit: 255, default: "active"
     t.string   "name",                   limit: 255,                    null: false
+    t.string   "state",                  limit: 255, default: "active"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
