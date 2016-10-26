@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem "rails", "~> 5.0.0"
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -15,9 +15,10 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancancan', '~> 1.10'
 gem 'bootstrap-sass', '3.2.0.0'
-gem 'will_paginate', '3.0.7'
+gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'config'
+gem 'mysql2'
 
 group :development, :test do
   gem "pry-rails"
@@ -25,11 +26,10 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'mysql2'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
+  gem "passenger"
 end
 

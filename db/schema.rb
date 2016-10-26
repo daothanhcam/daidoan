@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316144416) do
+ActiveRecord::Schema.define(version: 20161004071050) do
 
   create_table "banners", force: :cascade do |t|
     t.integer  "post_id",    limit: 4
@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 20160316144416) do
     t.string   "role",                   limit: 255, default: "member"
     t.string   "name",                   limit: 255,                    null: false
     t.string   "state",                  limit: 255, default: "active"
+    t.string   "sex",                    limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
