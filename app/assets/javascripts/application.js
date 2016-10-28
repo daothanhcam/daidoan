@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require ckeditor/init
 //= require bootstrap
+//= require moment
+//= require bootstrap-datetimepicker
+//= require_tree
 
 $(function(){
   $.material.init();

@@ -19,6 +19,8 @@ gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'config'
 gem 'mysql2'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 
 group :development, :test do
   gem "pry-rails"

@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  enum sex: [:male, :female]
-  enum role: ["super admin", "admin", "publisher", "member"]
+  enum gender: [:Male, :Female, :Other]
+  enum role: [:super_admin, :admin, :publisher, :member]
 end
