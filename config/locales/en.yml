@@ -29,7 +29,8 @@ en:
   users:
     registrations:
       new:
-        registration_title: "Create your Luu Danh account"
+        registration_title: "Create your LuuDanh account"
+        birthday_placeholder: "31/12/1990"
   posts:
     show:
       created_by: "Người viết: "

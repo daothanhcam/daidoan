@@ -4,7 +4,9 @@ messages:
   max_length: 1000
 users:
   email_max_leng: 255
+  email_min_leng: 8
   name_max_leng: 63
+  name_min_leng: 4
   avatar_size:
     header: 50
     comments: 100

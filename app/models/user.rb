@@ -7,9 +7,11 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   validates :email, presence: true, uniqueness: true,
-    length: {maximum: Settings.users.email_max_leng}
-  validates :name, presence: true, uniqueness: true,
-    length: {maximum: Settings.users.name_max_leng}
+    length: {maximum: Settings.users.email_max_leng,
+             minimum: Settings.users.email_min_leng}
+  validates :name, presence: true,
+    length: {maximum: Settings.users.name_max_leng,
+             minimum: Settings.users.name_min_leng}
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

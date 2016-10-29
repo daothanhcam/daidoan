@@ -1,0 +1,62 @@
+<h2 class="registration_title"><%= t ".registration_title" %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <fieldset>
+    <div class="field" class="form-group label-floating">
+      <%= f.label :name, class: "control-label" %>
+      <%= f.email_field :name, class: "form-control" %>
+    </div><br />
+
+    <div class="field" class="form-group label-floating">
+      <%= f.label :email, class: "control-label" %>
+      <%= f.email_field :email, class: "form-control" %>
+    </div><br />
+
+    <div class="field" class="form-group label-floating">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, {autocomplete: "off", class: "form-control"} %>
+    </div><br />
+
+    <div class="field" class="form-group label-floating">
+      <%= f.label :password_confirmation, class: "control-label" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    </div><br />
+
+    <%= f.label :birthday %>
+    <div class="field input-group date" id="datetimepicker4">
+      <%= f.text_field :birthday, class: "form-control", placeholder: t(".birthday_placeholder") %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar">
+          </span>
+      </span>
+    </div><br />
+
+    <div class="field" class="form-group label-floating">
+      <%= f.label :phone, class: "control-label" %>
+      <%= f.phone_field :phone, class: "form-control" %>
+    </div><br />
+
+    <div class="field" class="form-group label-floating">
+      <%= f.label :gender, class: "control-label" %>
+      <%= f.select :gender, options_from_collection_for_select(User.genders,
+       :first, :first), {}, {class: "form-control"} %>
+    </div><br />
+
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-raised btn-primary" %>
+      <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-default" %><br />
+    </div>
+  </fieldset>
+<% end %>
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker4').datetimepicker({
+      viewMode: 'years',
+      format: 'DD/MM/YYYY'
+    });
+  });
+</script>

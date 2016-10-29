@@ -21,6 +21,7 @@ gem 'config'
 gem 'mysql2'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
+gem 'bootstrap-material-design'
 
 group :development, :test do
   gem "pry-rails"

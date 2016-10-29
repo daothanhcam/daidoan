@@ -18,8 +18,4 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require_tree
-
-$(function(){
-  $.material.init();
-  $(".navbar-fixed-top").autoHidingNavbar();
-});
+//= require bootstrap-material-design
